@@ -1,5 +1,5 @@
 # declutter
-A tool to organize music files based on metadata.
+A tool to organize music files based on metadata. Probably won't work on Windows without some tinkering or Cygwin.
 
 ## Installation
 Dependencies:
