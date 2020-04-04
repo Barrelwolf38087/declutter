@@ -24,4 +24,7 @@ The default is `/usr/local`.
 ## Usage
 `$ declutter --source /path/to/my/unorganized/library --dest /put/the/organized/files/here/`
 
+This will organize the files first by artist, then by album. I might make that configurable if I get bored,
+but I figured that would cover a lot of use cases (including my own).
+
 For a full list of options, run `declutter --help`.
