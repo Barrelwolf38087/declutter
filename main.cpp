@@ -1,13 +1,17 @@
 #include <iostream>
 #include <vector>
 #include <filesystem>
+#include <cctype>
 #include <fileref.h>
 #include <cxxopts.hpp>
 
 namespace fs = std::filesystem;
 
 static const char *ext[] = {
-        ".mp3"
+        ".mp3", ".mpc", ".flac",
+        ".mp4", ".asf", ".aiff",
+        ".wav", ".tta", ".wv",
+        ".ogg", ".spx", ".opus"
 };
 
 static const char blacklist[] = "<>:\"/\\|?*";
@@ -129,7 +133,12 @@ int main(int argc, char **argv) {
 }
 
 bool isMusicFile(const fs::path& path) {
-    return !fs::is_directory(path) && std::find(std::begin(ext), std::end(ext), path.extension()) != std::end(ext);
+    std::string lower;
+    for (char c : path.extension().string()) {
+        lower.push_back(std::tolower(c));
+    }
+
+    return !fs::is_directory(path) && std::find(std::begin(ext), std::end(ext), lower) != std::end(ext);
 }
 
 bool createDir(const fs::path& path) {
