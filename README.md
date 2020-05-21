@@ -16,7 +16,7 @@ Optionally, you can specify the installation prefix with `-DCMAKE_INSTALL_PREFIX
 The default is `/usr/local`.
 
 ### Build
-`$ cmake --build . --target declutter`
+`$ make`
 
 ### Install
 `# make install`
