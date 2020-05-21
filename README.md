@@ -30,5 +30,5 @@ but I figured this would cover a lot of use cases (including my own).
 For a full list of options, run `declutter --help`.
 
 ## Known Issues
-- Segfault when there are no input files. I haven't bothered to look into this yet.
+- Segfaults when there are no input files. I haven't bothered to look into this yet.
 - Creates a false vacuum and deletes the universe when any input file lacks any of the used tags (probably).
